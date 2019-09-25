@@ -36,14 +36,9 @@
             this.btnServiceInvoice = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txttotalsell = new System.Windows.Forms.TextBox();
-            this.txttotalprofit = new System.Windows.Forms.TextBox();
+            this.serviceInvoiceControl2 = new Phone_And_More.ServiceInvoiceControl();
             this.serviceInvoiceControl1 = new Phone_And_More.ServiceInvoiceControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +83,7 @@
             this.btnSalesInvoice.TabIndex = 25;
             this.btnSalesInvoice.Text = "Sales Invoices";
             this.btnSalesInvoice.UseVisualStyleBackColor = true;
+            this.btnSalesInvoice.Click += new System.EventHandler(this.btnSalesInvoice_Click);
             // 
             // btnServiceInvoice
             // 
@@ -114,7 +110,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(237, 35);
             this.dateTimePicker1.TabIndex = 27;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 
@@ -126,52 +121,12 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Date  :";
             // 
-            // dataGridView1
+            // serviceInvoiceControl2
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 489);
-            this.dataGridView1.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 695);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 20);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Total Sell ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 727);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 20);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Total Profit";
-            // 
-            // txttotalsell
-            // 
-            this.txttotalsell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalsell.Location = new System.Drawing.Point(121, 692);
-            this.txttotalsell.Name = "txttotalsell";
-            this.txttotalsell.ReadOnly = true;
-            this.txttotalsell.Size = new System.Drawing.Size(217, 26);
-            this.txttotalsell.TabIndex = 37;
-            // 
-            // txttotalprofit
-            // 
-            this.txttotalprofit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalprofit.Location = new System.Drawing.Point(121, 724);
-            this.txttotalprofit.Name = "txttotalprofit";
-            this.txttotalprofit.ReadOnly = true;
-            this.txttotalprofit.Size = new System.Drawing.Size(217, 26);
-            this.txttotalprofit.TabIndex = 38;
+            this.serviceInvoiceControl2.Location = new System.Drawing.Point(0, 136);
+            this.serviceInvoiceControl2.Name = "serviceInvoiceControl2";
+            this.serviceInvoiceControl2.Size = new System.Drawing.Size(1128, 646);
+            this.serviceInvoiceControl2.TabIndex = 26;
             // 
             // serviceInvoiceControl1
             // 
@@ -184,14 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txttotalprofit);
-            this.Controls.Add(this.txttotalsell);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.serviceInvoiceControl1);
+            this.Controls.Add(this.serviceInvoiceControl2);
             this.Controls.Add(this.btnSalesInvoice);
             this.Controls.Add(this.btnServiceInvoice);
             this.Controls.Add(this.panel1);
@@ -199,9 +147,7 @@
             this.Size = new System.Drawing.Size(1134, 785);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,10 +161,6 @@
         private ServiceInvoiceControl serviceInvoiceControl1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txttotalsell;
-        private System.Windows.Forms.TextBox txttotalprofit;
+        private ServiceInvoiceControl serviceInvoiceControl2;
     }
 }

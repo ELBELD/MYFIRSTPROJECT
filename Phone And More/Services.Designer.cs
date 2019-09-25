@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Services));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,17 +40,17 @@
             this.btnalfa = new System.Windows.Forms.Button();
             this.btntouch = new System.Windows.Forms.Button();
             this.dataGridInvoice = new System.Windows.Forms.DataGridView();
+            this.ServiceNameInvoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceInvoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Options = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.sid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridService = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalprice = new System.Windows.Forms.Label();
             this.lbltest = new System.Windows.Forms.Label();
-            this.ServiceNameInvoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceInvoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Options = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridService)).BeginInit();
@@ -163,6 +164,14 @@
             // 
             this.dataGridInvoice.AllowUserToAddRows = false;
             this.dataGridInvoice.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServiceNameInvoice,
@@ -173,9 +182,46 @@
             this.dataGridInvoice.Location = new System.Drawing.Point(456, 124);
             this.dataGridInvoice.Name = "dataGridInvoice";
             this.dataGridInvoice.ReadOnly = true;
-            this.dataGridInvoice.Size = new System.Drawing.Size(662, 611);
+            this.dataGridInvoice.Size = new System.Drawing.Size(667, 611);
             this.dataGridInvoice.TabIndex = 1;
             this.dataGridInvoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridInvoice_CellContentClick);
+            // 
+            // ServiceNameInvoice
+            // 
+            this.ServiceNameInvoice.HeaderText = "Service Name";
+            this.ServiceNameInvoice.Name = "ServiceNameInvoice";
+            this.ServiceNameInvoice.ReadOnly = true;
+            // 
+            // cost1
+            // 
+            this.cost1.HeaderText = "Cost";
+            this.cost1.Name = "cost1";
+            this.cost1.ReadOnly = true;
+            this.cost1.Visible = false;
+            // 
+            // PriceInvoice
+            // 
+            this.PriceInvoice.HeaderText = "Price";
+            this.PriceInvoice.Name = "PriceInvoice";
+            this.PriceInvoice.ReadOnly = true;
+            // 
+            // Options
+            // 
+            this.Options.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Options.HeaderText = "Options";
+            this.Options.Name = "Options";
+            this.Options.ReadOnly = true;
+            this.Options.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Options.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Options.Text = "Delete";
+            this.Options.UseColumnTextForButtonValue = true;
+            // 
+            // sid
+            // 
+            this.sid.HeaderText = "sid";
+            this.sid.Name = "sid";
+            this.sid.ReadOnly = true;
+            this.sid.Visible = false;
             // 
             // dataGridService
             // 
@@ -249,43 +295,6 @@
             this.lbltest.Size = new System.Drawing.Size(24, 13);
             this.lbltest.TabIndex = 5;
             this.lbltest.Text = "test";
-            // 
-            // ServiceNameInvoice
-            // 
-            this.ServiceNameInvoice.HeaderText = "Service Name";
-            this.ServiceNameInvoice.Name = "ServiceNameInvoice";
-            this.ServiceNameInvoice.ReadOnly = true;
-            // 
-            // cost1
-            // 
-            this.cost1.HeaderText = "Cost";
-            this.cost1.Name = "cost1";
-            this.cost1.ReadOnly = true;
-            this.cost1.Visible = false;
-            // 
-            // PriceInvoice
-            // 
-            this.PriceInvoice.HeaderText = "Price";
-            this.PriceInvoice.Name = "PriceInvoice";
-            this.PriceInvoice.ReadOnly = true;
-            // 
-            // Options
-            // 
-            this.Options.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Options.HeaderText = "Options";
-            this.Options.Name = "Options";
-            this.Options.ReadOnly = true;
-            this.Options.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Options.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Options.Text = "Delete";
-            this.Options.UseColumnTextForButtonValue = true;
-            // 
-            // sid
-            // 
-            this.sid.HeaderText = "sid";
-            this.sid.Name = "sid";
-            this.sid.ReadOnly = true;
-            this.sid.Visible = false;
             // 
             // Services
             // 

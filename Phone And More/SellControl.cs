@@ -19,6 +19,7 @@ namespace Phone_And_More
         public SellControl()
         {
             InitializeComponent();
+           
             autocompletxt();
             table.Columns.Add("Barcode", typeof(string));
             table.Columns.Add("Item Name", typeof(string));

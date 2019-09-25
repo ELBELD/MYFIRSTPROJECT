@@ -21,7 +21,9 @@ namespace Phone_And_More
         public Services()
         {
             InitializeComponent();
-            
+            loadtouch();
+            dataGridService.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridInvoice.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
         
         public void loadtouch()

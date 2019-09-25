@@ -72,6 +72,12 @@
     <Compile Include="SellControl.Designer.cs">
       <DependentUpon>SellControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="sellInvoiceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sellInvoiceControl.Designer.cs">
+      <DependentUpon>sellInvoiceControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServiceInvoiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="SellControl.resx">
       <DependentUpon>SellControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sellInvoiceControl.resx">
+      <DependentUpon>sellInvoiceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceInvoiceControl.resx">
       <DependentUpon>ServiceInvoiceControl.cs</DependentUpon>

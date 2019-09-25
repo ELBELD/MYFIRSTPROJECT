@@ -1,0 +1,16 @@
+c:\users\macbook\documents\visual studio 2015\Projects\Phone And More\Phone And More\bin\Debug\Phone And More.exe.config
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\bin\Debug\Phone And More.exe
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\bin\Debug\Phone And More.pdb
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.Properties.Resources.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.csproj.GenerateResource.Cache
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.exe
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.pdb
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.MainMenu.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.Services.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.AddStock.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.stockcontrol.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.UpdateStock.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.SellControl.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.HistoryControl.resources
+C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.ServiceInvoiceControl.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.sellInvoiceControl.resources
