@@ -13,7 +13,7 @@ namespace Phone_And_More
     public partial class ServiceInvoiceControl : UserControl
     {
         SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=PHONEANDMORE;Integrated Security=True");
-        int sum, cost, sumd;
+        int sum, cost; /*sumd;*/
         public ServiceInvoiceControl()
         {
             InitializeComponent();

@@ -41,6 +41,7 @@
             this.lblTotalprice = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnChekout = new System.Windows.Forms.Button();
+            this.lblcost = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(0, 13);
             this.lblid.TabIndex = 13;
+            this.lblid.Visible = false;
             // 
             // label1
             // 
@@ -171,10 +173,20 @@
             this.btnChekout.Visible = false;
             this.btnChekout.Click += new System.EventHandler(this.btnChekout_Click);
             // 
+            // lblcost
+            // 
+            this.lblcost.AutoSize = true;
+            this.lblcost.Location = new System.Drawing.Point(568, 732);
+            this.lblcost.Name = "lblcost";
+            this.lblcost.Size = new System.Drawing.Size(0, 13);
+            this.lblcost.TabIndex = 13;
+            this.lblcost.Visible = false;
+            // 
             // SellControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblcost);
             this.Controls.Add(this.btnChekout);
             this.Controls.Add(this.lblTotalprice);
             this.Controls.Add(this.label5);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnChekout;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Label lblcost;
     }
 }

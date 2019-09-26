@@ -174,9 +174,10 @@ namespace Phone_And_More
                    
                     insert.CommandText = "insert into ser_inv_details(ser_inv_id,ser_inv_SID,ser_inv_quantity,ser_inv_cost,ser_inv_price) values('"+id +"','"+dataGridInvoice.Rows[i].Cells[4].Value+"','" +quantity+ "','"+dataGridInvoice.Rows[i].Cells[1].Value+"','"+dataGridInvoice.Rows[i].Cells[2].Value+"')";
                     insert.ExecuteNonQuery();
-                
-                 }
-            
+                    // substract the quantity from the stock
+
+                }
+
                 con.Close();
 
                 MessageBox.Show("Order Confirmed");

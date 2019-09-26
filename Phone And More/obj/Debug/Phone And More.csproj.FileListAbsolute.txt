@@ -14,3 +14,4 @@ C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And 
 C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.HistoryControl.resources
 C:\Users\MacBook\documents\visual studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.ServiceInvoiceControl.resources
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.sellInvoiceControl.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.csprojResolveAssemblyReference.cache
