@@ -15,8 +15,7 @@ namespace Phone_And_More
         public MainMenu()
         {
             InitializeComponent();
-            sidepanel.Height = button1.Height;
-            services1.BringToFront();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -26,32 +25,31 @@ namespace Phone_And_More
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sidepanel.Height = button1.Height;
-            sidepanel.Top = button1.Top;
+            
             services1.BringToFront();
+            
         }
 
         private void btnstock_Click(object sender, EventArgs e)
         {
-            sidepanel.Height = btnstock.Height;
-            sidepanel.Top = btnstock.Top;
-            stockcontrol1.BringToFront();
-          
+            
+            StockForm rc = new StockForm();
+            rc.ShowDialog();
 
         }
 
         private void btnsell_Click(object sender, EventArgs e)
         {
-            sidepanel.Height = btnsell.Height;
-            sidepanel.Top = btnsell.Top;
-            sellControl1.BringToFront();
+            
+            SellForm rc = new SellForm();
+            rc.ShowDialog();
         }
 
         private void btnhistory_Click(object sender, EventArgs e)
         {
-            sidepanel.Height = btnhistory.Height;
-            sidepanel.Top = btnhistory.Top;
-            historyControl1.BringToFront();
+            
+            HistoryForm rc = new HistoryForm();
+            rc.ShowDialog();
 
         }
     }

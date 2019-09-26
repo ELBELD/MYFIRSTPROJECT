@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace Phone_And_More
 {
-    public partial class ServiceInvoiceControl : UserControl
+    public partial class HistoryForm : Form
     {
         SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=PHONEANDMORE;Integrated Security=True");
         int sum, cost; /*sumd;*/
-        public ServiceInvoiceControl()
+        public HistoryForm()
         {
             InitializeComponent();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -22,6 +22,7 @@ namespace Phone_And_More
             dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView2.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             TotalPrice();
+            
         }
         void getserviceinvoice()
         {
@@ -63,14 +64,6 @@ namespace Phone_And_More
             }
             txttotalsell.Text = sum.ToString();
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            getserviceinvoice();
-            TotalPrice();
-            totalprofit();
-        }
-
         void totalprofit()
         {
             cost = 0;
@@ -82,7 +75,8 @@ namespace Phone_And_More
             profit = sum - cost;
             txttotalprofit.Text = profit.ToString();
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -103,6 +97,18 @@ namespace Phone_And_More
             {
 
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            getserviceinvoice();
+            TotalPrice();
+            totalprofit();
         }
     }
 }
