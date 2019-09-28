@@ -12,6 +12,7 @@ namespace Phone_And_More
 {
     public partial class MainMenu : Form
     {
+        string b;
         public MainMenu()
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace Phone_And_More
         {
             
             services1.BringToFront();
+            
+        }
+        public void get(string x)
+        {
+            b = x.ToString();
+            lbluserA.Text ="***"+b+"***";
             
         }
 
@@ -49,6 +56,7 @@ namespace Phone_And_More
         {
             
             HistoryForm rc = new HistoryForm();
+            rc.get(lbluserA.Text);
             rc.ShowDialog();
 
         }

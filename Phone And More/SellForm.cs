@@ -66,26 +66,71 @@ namespace Phone_And_More
 
         private void txtselect_KeyDown(object sender, KeyEventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
-            if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode == Keys.Enter)
             {
 
                 check();
             }
 
 
-            //}
-            //catch
-            //{
+        }
+            catch
+            {
 
-            //}
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtbarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+                if (e.KeyCode == Keys.Enter)
+                {
+
+                    check();
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+        void barcodid()
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select stockid,item_name,item_qty,item_price,barcode,item_cost from stock where barcode ='" + txtbarcode.Text + "'";
+            cmd.ExecuteNonQuery();
+            SqlDataReader myreader;
+            myreader = cmd.ExecuteReader();
+            while (myreader.Read())
+            {
+                lblid.Text = (myreader[0].ToString());
+                name = (myreader[1].ToString());
+
+                price = (myreader[3].ToString());
+                barcode = (myreader[4].ToString());
+                cost = (myreader[5].ToString());
+                itemid = (myreader[0].ToString());
+            }
+            con.Close();
+        }
+
+        private void txtbarcode_TextChanged(object sender, EventArgs e)
+        {
+            barcodid();
         }
 
         void loadid()
@@ -111,31 +156,63 @@ namespace Phone_And_More
         }
         void check()
         {
-            bool found = false;
-            if (dataGridView1.Rows.Count > 0)
+            if (txtselect.Text != "")
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                bool found = false;
+                if (dataGridView1.Rows.Count > 0)
                 {
-                    if (Convert.ToString(row.Cells[1].Value) == name && Convert.ToString(row.Cells[6].Value) == itemid)
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        row.Cells[3].Value = Convert.ToString(1 + Convert.ToInt32(row.Cells[3].Value));
-                        found = true;
-                        txtselect.Text = "";
-                        row.Cells[4].Value = Convert.ToString(Convert.ToInt32(row.Cells[2].Value) * Convert.ToInt32(row.Cells[3].Value));
-                        row.Cells[7].Value = Convert.ToString(Convert.ToInt32(row.Cells[5].Value) * Convert.ToInt32(row.Cells[3].Value));
+                        if (Convert.ToString(row.Cells[1].Value) == name && Convert.ToString(row.Cells[6].Value) == itemid)
+                        {
+                            row.Cells[3].Value = Convert.ToString(1 + Convert.ToInt32(row.Cells[3].Value));
+                            found = true;
+                            txtselect.Text = "";
+                            row.Cells[4].Value = Convert.ToString(Convert.ToInt32(row.Cells[2].Value) * Convert.ToInt32(row.Cells[3].Value));
+                            row.Cells[7].Value = Convert.ToString(Convert.ToInt32(row.Cells[5].Value) * Convert.ToInt32(row.Cells[3].Value));
+                            sumtotal();
+                        }
+                    }
+                    if (!found)
+                    {
+                        addsellone();
                         sumtotal();
                     }
                 }
-                if (!found)
+                else
                 {
                     addsellone();
                     sumtotal();
                 }
             }
-            else
+            if (txtbarcode.Text != "")
             {
-                addsellone();
-                sumtotal();
+                bool found = false;
+                if (dataGridView1.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (Convert.ToString(row.Cells[1].Value) == name && Convert.ToString(row.Cells[6].Value) == itemid)
+                        {
+                            row.Cells[3].Value = Convert.ToString(1 + Convert.ToInt32(row.Cells[3].Value));
+                            found = true;
+                            txtbarcode.Text = "";
+                            row.Cells[4].Value = Convert.ToString(Convert.ToInt32(row.Cells[2].Value) * Convert.ToInt32(row.Cells[3].Value));
+                            row.Cells[7].Value = Convert.ToString(Convert.ToInt32(row.Cells[5].Value) * Convert.ToInt32(row.Cells[3].Value));
+                            sumtotal();
+                        }
+                    }
+                    if (!found)
+                    {
+                        addsellone();
+                        sumtotal();
+                    }
+                }
+                else
+                {
+                    addsellone();
+                    sumtotal();
+                }
             }
 
         }
@@ -154,10 +231,10 @@ namespace Phone_And_More
         }
         void addsellone()
         {
-            //try
-            //{
+            try
+            {
 
-            int x, y, c;
+                int x, y, c;
             x = int.Parse(price);
             c = int.Parse(cost);
             y = int.Parse(qunatity);
@@ -180,17 +257,17 @@ namespace Phone_And_More
             barcode = "";
             cost = "";
 
-            //}
-            //catch
-            //{
+        }
+            catch
+            {
 
-            //}
+            }
         }
         private void btnChekout_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            con.Open();
+            try
+            {
+                con.Open();
             //add service invoice
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -232,16 +309,16 @@ namespace Phone_And_More
 
             con.Close();
             MessageBox.Show("order confirmed");
-
+            this.Close();
             btnChekout.Visible = false;
             label5.Visible = false;
             lblTotalprice.Visible = false;
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+}
     }
 }

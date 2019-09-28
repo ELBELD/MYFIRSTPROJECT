@@ -31,7 +31,7 @@ namespace Phone_And_More
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select service_name,service_cost,service_price,SID from services where service_type='touch'";
+            cmd.CommandText = "select service_name as 'Service Name',service_cost,service_price as 'Price',SID from services where service_type='touch'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -53,7 +53,7 @@ namespace Phone_And_More
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select service_name,service_cost,service_price,SID from services where service_type='alfa'";
+            cmd.CommandText = "select service_name as 'Service Name',service_cost,service_price as 'Price',SID from services where service_type='alfa'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

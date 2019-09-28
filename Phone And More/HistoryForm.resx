@@ -118,32 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSalesInvoice.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAZNJREFUSEvtVT1LBDEQXbHS0iSKH6XWNoKVaCE2Ymll419QRETy4dnZWVtZ+it0
-        e5urxULsBBHEwksiu87k5k7udm83h2KjDx5Jlsx7ySSZTX4dk8avC+VPBlLa3YnjbJamDwdh3ueFtpnQ
-        Pq9gyrUzTH/sUFg8mPFrJYL9TGknliu3QqFxGMoA+lzbZy5bCxRej2ENiHczRxkjiWrEGDDt7yE1q0LZ
-        GxingcqfkkQ1IncAtNfQNsJOiCRRjXiDIkmiGv8GtfhLBvaFa3/GlN8Sxm/Au9gniWpEGSh/O7eXjQnp
-        rqAevTJtW/A9japL9Qb2BcWZtE84hqr6AC2+5hzMPFd+k6TKUWeAaQkr//rWV5fcY7Kdj5JcEXUGIeeQ
-        lu7KlT/HHxD2oUY1wzxpF0muiNoUwYF2ch5WDuIhBvpcukucM6XcMskVwYxb6hHsp3IH0LZz3mZPiuBs
-        3qZNPk5yZchHYGIjBJZR+gu8LXigMMbS3eysPFC5QxL6HvC24IF2hHHlPybeBdwWPFDM+eC0JMknODgN
-        dEISsEYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnServiceInvoice.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAZNJREFUSEvtVT1LBDEQXbHS0iSKH6XWNoKVaCE2Ymll419QRETy4dnZWVtZ+it0
-        e5urxULsBBHEwksiu87k5k7udm83h2KjDx5Jlsx7ySSZTX4dk8avC+VPBlLa3YnjbJamDwdh3ueFtpnQ
-        Pq9gyrUzTH/sUFg8mPFrJYL9TGknliu3QqFxGMoA+lzbZy5bCxRej2ENiHczRxkjiWrEGDDt7yE1q0LZ
-        GxingcqfkkQ1IncAtNfQNsJOiCRRjXiDIkmiGv8GtfhLBvaFa3/GlN8Sxm/Au9gniWpEGSh/O7eXjQnp
-        rqAevTJtW/A9japL9Qb2BcWZtE84hqr6AC2+5hzMPFd+k6TKUWeAaQkr//rWV5fcY7Kdj5JcEXUGIeeQ
-        lu7KlT/HHxD2oUY1wzxpF0muiNoUwYF2ch5WDuIhBvpcukucM6XcMskVwYxb6hHsp3IH0LZz3mZPiuBs
-        3qZNPk5yZchHYGIjBJZR+gu8LXigMMbS3eysPFC5QxL6HvC24IF2hHHlPybeBdwWPFDM+eC0JMknODgN
-        dEISsEYAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
