@@ -14,3 +14,4 @@ C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And 
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.HistoryForm.resources
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.csprojResolveAssemblyReference.cache
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.Login.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.EditSellinvoice.resources

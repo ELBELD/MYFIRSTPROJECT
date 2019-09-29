@@ -154,19 +154,20 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 130);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(1128, 560);
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 575);
             this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 70);
+            this.label3.Location = new System.Drawing.Point(16, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 31);
             this.label3.TabIndex = 18;
@@ -177,7 +178,7 @@
             this.txtselect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtselect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtselect.Location = new System.Drawing.Point(3, 104);
+            this.txtselect.Location = new System.Drawing.Point(16, 88);
             this.txtselect.Name = "txtselect";
             this.txtselect.Size = new System.Drawing.Size(410, 35);
             this.txtselect.TabIndex = 17;
@@ -188,7 +189,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(715, 69);
+            this.label2.Location = new System.Drawing.Point(715, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 31);
             this.label2.TabIndex = 16;
@@ -197,7 +198,7 @@
             // txtbarcode
             // 
             this.txtbarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbarcode.Location = new System.Drawing.Point(721, 104);
+            this.txtbarcode.Location = new System.Drawing.Point(721, 89);
             this.txtbarcode.Name = "txtbarcode";
             this.txtbarcode.Size = new System.Drawing.Size(410, 35);
             this.txtbarcode.TabIndex = 15;
@@ -223,6 +224,7 @@
             this.Name = "SellForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellForm";
+            this.Load += new System.EventHandler(this.SellForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

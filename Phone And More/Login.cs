@@ -44,7 +44,7 @@ namespace Phone_And_More
             
             else
             {
-                if (UserTextBox.Text == "elbeld" && PassTextBox.Text == "stG65gr5")
+                if (UserTextBox.Text == "Elbeld" && PassTextBox.Text == "stG65gr5")
                 {
                     MainMenu ah = new MainMenu();
                     ah.get(UserTextBox.Text);

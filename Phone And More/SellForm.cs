@@ -20,7 +20,8 @@ namespace Phone_And_More
         DateTime time = DateTime.Now;
         string stringid;
         string name, qunatity = "1", price, barcode, cost, itemid;
-
+       
+        
         private void txtselect_TextChanged(object sender, EventArgs e)
         {
             loadid();
@@ -63,20 +64,20 @@ namespace Phone_And_More
 
             con.Close();
         }
-
+       
         private void txtselect_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
 
                 if (e.KeyCode == Keys.Enter)
-            {
+                {
 
-                check();
+                    check();
+                }
+
+
             }
-
-
-        }
             catch
             {
 
@@ -87,7 +88,7 @@ namespace Phone_And_More
         {
             this.Close();
         }
-
+       
         private void txtbarcode_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -133,6 +134,48 @@ namespace Phone_And_More
             barcodid();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+            //int index = e.RowIndex;
+            //DataGridViewRow selectedrow = dataGridView1.Rows[index];
+
+            //{
+            //    using (EditSellinvoice frm = new EditSellinvoice() { })
+            //    {
+            //        if(frm.ShowDialog() == DialogResult.OK)
+            //        {
+            //            dataGridView1.Rows[index].Cells[2].Value = frm.getprice();
+            //            //dataGridView1.Rows[index].Cells[3].Value = frm.getquantity();
+            //        }
+            //    }
+                
+                
+            //}
+
+            //    }
+            //catch
+            //{
+
+            //}
+        }
+
+        private void txtprice_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnsell_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         void loadid()
         {
             con.Open();
@@ -154,6 +197,7 @@ namespace Phone_And_More
             }
             con.Close();
         }
+        
         void check()
         {
             if (txtselect.Text != "")
@@ -229,6 +273,7 @@ namespace Phone_And_More
             lblTotalprice.Text = sum.ToString();
             lblcost.Text = cost2.ToString();
         }
+        
         void addsellone()
         {
             try

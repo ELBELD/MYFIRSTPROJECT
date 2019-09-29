@@ -36,7 +36,8 @@ namespace Phone_And_More
         void show()
         {
             string x = "***admin***";
-            if(lbluserA.Text==x)
+            string y = "***Elbeld***";
+            if(lbluserA.Text==x|| lbluserA.Text == y)
             {
                 lbltotalprofit.Visible = true;
                 txttotalprofit.Visible = true;
@@ -96,8 +97,8 @@ namespace Phone_And_More
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 if (RadioService.Checked == true)
                 {
                     int index = e.RowIndex;
@@ -128,11 +129,11 @@ namespace Phone_And_More
 
                 }
 
-            //    }
-            //catch
-            //{
+        }
+            catch
+            {
 
-            //}
+            }
         }
         void getSellInvoices()
         {
@@ -186,6 +187,8 @@ namespace Phone_And_More
             if(RadioSales.Checked==true)
             {
                 getSellInvoices();
+                TotalPrice();
+                totalprofit();
             }
         }
     }
