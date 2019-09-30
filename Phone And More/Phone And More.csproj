@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_BXM_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomers.Designer.cs">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddStock.Designer.cs">
       <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtsHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtsHistory.Designer.cs">
+      <DependentUpon>DebtsHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="editGrid.cs" />
     <Compile Include="EditSellinvoice.cs">
@@ -103,8 +124,17 @@
     <Compile Include="UpdateStock.Designer.cs">
       <DependentUpon>UpdateStock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCustomers.resx">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtsHistory.resx">
+      <DependentUpon>DebtsHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditSellinvoice.resx">
       <DependentUpon>EditSellinvoice.cs</DependentUpon>
@@ -158,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_BXM_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

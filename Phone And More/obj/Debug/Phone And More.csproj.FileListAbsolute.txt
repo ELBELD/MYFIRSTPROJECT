@@ -15,3 +15,6 @@ C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And 
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone And More.csprojResolveAssemblyReference.cache
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.Login.resources
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.EditSellinvoice.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.Customers.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.DebtsHistory.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Debug\Phone_And_More.AddCustomers.resources

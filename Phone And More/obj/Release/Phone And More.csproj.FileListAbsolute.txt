@@ -1,0 +1,16 @@
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\bin\Release\Phone And More.exe.config
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\bin\Release\Phone And More.exe
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\bin\Release\Phone And More.pdb
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.AddStock.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.EditSellinvoice.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.MainMenu.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.HistoryForm.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.Login.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.Properties.Resources.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.SellForm.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.Services.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.StockForm.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.UpdateStock.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.csproj.GenerateResource.Cache
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.exe
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.pdb

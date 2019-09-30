@@ -30,17 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbluserA = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbluserA = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnhistory = new System.Windows.Forms.Button();
             this.btnsell = new System.Windows.Forms.Button();
             this.btnstock = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnActiveDebts = new System.Windows.Forms.Button();
+            this.btnDebtsHistory = new System.Windows.Forms.Button();
             this.services1 = new Phone_And_More.Services();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -50,6 +53,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.btnDebtsHistory);
+            this.panel1.Controls.Add(this.btnActiveDebts);
+            this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbluserA);
             this.panel1.Controls.Add(this.label1);
@@ -63,6 +69,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 1021);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 27);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Type OF Username :";
+            // 
+            // lbluserA
+            // 
+            this.lbluserA.AutoSize = true;
+            this.lbluserA.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluserA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbluserA.Location = new System.Drawing.Point(3, 61);
+            this.lbluserA.Name = "lbluserA";
+            this.lbluserA.Size = new System.Drawing.Size(52, 31);
+            this.lbluserA.TabIndex = 5;
+            this.lbluserA.Text = "Type";
             // 
             // label1
             // 
@@ -95,17 +122,6 @@
             this.panel3.Size = new System.Drawing.Size(1245, 28);
             this.panel3.TabIndex = 2;
             // 
-            // lbluserA
-            // 
-            this.lbluserA.AutoSize = true;
-            this.lbluserA.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluserA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbluserA.Location = new System.Drawing.Point(3, 61);
-            this.lbluserA.Name = "lbluserA";
-            this.lbluserA.Size = new System.Drawing.Size(52, 31);
-            this.lbluserA.TabIndex = 5;
-            this.lbluserA.Text = "Type";
-            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -133,6 +149,22 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCustomer
+            // 
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 347);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(190, 73);
+            this.btnCustomer.TabIndex = 7;
+            this.btnCustomer.Text = "Customers";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
             // btnhistory
             // 
             this.btnhistory.FlatAppearance.BorderSize = 0;
@@ -140,7 +172,7 @@
             this.btnhistory.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhistory.Image = ((System.Drawing.Image)(resources.GetObject("btnhistory.Image")));
             this.btnhistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnhistory.Location = new System.Drawing.Point(0, 347);
+            this.btnhistory.Location = new System.Drawing.Point(4, 584);
             this.btnhistory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnhistory.Name = "btnhistory";
             this.btnhistory.Size = new System.Drawing.Size(190, 73);
@@ -197,15 +229,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // btnActiveDebts
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 27);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Type OF Username :";
+            this.btnActiveDebts.FlatAppearance.BorderSize = 0;
+            this.btnActiveDebts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActiveDebts.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiveDebts.Image = ((System.Drawing.Image)(resources.GetObject("btnActiveDebts.Image")));
+            this.btnActiveDebts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActiveDebts.Location = new System.Drawing.Point(5, 426);
+            this.btnActiveDebts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnActiveDebts.Name = "btnActiveDebts";
+            this.btnActiveDebts.Size = new System.Drawing.Size(190, 73);
+            this.btnActiveDebts.TabIndex = 8;
+            this.btnActiveDebts.Text = "Active Debts";
+            this.btnActiveDebts.UseVisualStyleBackColor = true;
+            // 
+            // btnDebtsHistory
+            // 
+            this.btnDebtsHistory.FlatAppearance.BorderSize = 0;
+            this.btnDebtsHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebtsHistory.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebtsHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnDebtsHistory.Image")));
+            this.btnDebtsHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebtsHistory.Location = new System.Drawing.Point(6, 505);
+            this.btnDebtsHistory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDebtsHistory.Name = "btnDebtsHistory";
+            this.btnDebtsHistory.Size = new System.Drawing.Size(190, 73);
+            this.btnDebtsHistory.TabIndex = 9;
+            this.btnDebtsHistory.Text = "Debts History";
+            this.btnDebtsHistory.UseVisualStyleBackColor = true;
+            this.btnDebtsHistory.Click += new System.EventHandler(this.btnDebtsHistory_Click);
             // 
             // services1
             // 
@@ -258,6 +311,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbluserA;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnDebtsHistory;
+        private System.Windows.Forms.Button btnActiveDebts;
     }
 }
 

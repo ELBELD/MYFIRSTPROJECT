@@ -60,5 +60,17 @@ namespace Phone_And_More
             rc.ShowDialog();
 
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Customers rc = new Customers();
+            rc.ShowDialog();
+        }
+
+        private void btnDebtsHistory_Click(object sender, EventArgs e)
+        {
+            DebtsHistory rc = new DebtsHistory();
+            rc.ShowDialog();
+        }
     }
 }
