@@ -72,5 +72,11 @@ namespace Phone_And_More
             DebtsHistory rc = new DebtsHistory();
             rc.ShowDialog();
         }
+
+        private void btnActiveDebts_Click(object sender, EventArgs e)
+        {
+            ActiveDebts rc = new ActiveDebts();
+            rc.ShowDialog();
+        }
     }
 }

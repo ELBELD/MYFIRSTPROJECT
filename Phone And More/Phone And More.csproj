@@ -49,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveDebtscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveDebtscs.Designer.cs">
+      <DependentUpon>ActiveDebtscs.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddCustomers.Designer.cs">
       <DependentUpon>AddCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDebts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDebts.Designer.cs">
+      <DependentUpon>AddDebts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPartialAmmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPartialAmmount.Designer.cs">
+      <DependentUpon>AddPartialAmmount.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStock.cs">
       <SubType>Form</SubType>
@@ -124,8 +142,17 @@
     <Compile Include="UpdateStock.Designer.cs">
       <DependentUpon>UpdateStock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActiveDebtscs.resx">
+      <DependentUpon>ActiveDebtscs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCustomers.resx">
       <DependentUpon>AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDebts.resx">
+      <DependentUpon>AddDebts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPartialAmmount.resx">
+      <DependentUpon>AddPartialAmmount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>

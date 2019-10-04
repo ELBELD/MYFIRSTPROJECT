@@ -44,10 +44,27 @@ namespace Phone_And_More
             dataGridView1.DataSource = dt;
             con.Close();
         }
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            loadgrid();
+        }
         private void btnAddCustomers_Click(object sender, EventArgs e)
         {
             AddCustomers rc = new AddCustomers();
+            rc.FormClosing += new FormClosingEventHandler(this.Form2_FormClosing);
             rc.ShowDialog();
+             
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtsearch.Text != "")
+            {
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = "'Customer Name' like '" + txtsearch.Text + "%'";
+                dataGridView1.DataSource = dv;
+
+            }
         }
     }
 }

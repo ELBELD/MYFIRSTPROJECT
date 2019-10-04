@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDebtsHistory = new System.Windows.Forms.Button();
+            this.btnActiveDebts = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbluserA = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnhistory = new System.Windows.Forms.Button();
             this.btnsell = new System.Windows.Forms.Button();
             this.btnstock = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnActiveDebts = new System.Windows.Forms.Button();
-            this.btnDebtsHistory = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.services1 = new Phone_And_More.Services();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +69,54 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 1021);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDebtsHistory
+            // 
+            this.btnDebtsHistory.FlatAppearance.BorderSize = 0;
+            this.btnDebtsHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebtsHistory.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebtsHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnDebtsHistory.Image")));
+            this.btnDebtsHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebtsHistory.Location = new System.Drawing.Point(6, 505);
+            this.btnDebtsHistory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDebtsHistory.Name = "btnDebtsHistory";
+            this.btnDebtsHistory.Size = new System.Drawing.Size(190, 73);
+            this.btnDebtsHistory.TabIndex = 9;
+            this.btnDebtsHistory.Text = "Debts History";
+            this.btnDebtsHistory.UseVisualStyleBackColor = true;
+            this.btnDebtsHistory.Click += new System.EventHandler(this.btnDebtsHistory_Click);
+            // 
+            // btnActiveDebts
+            // 
+            this.btnActiveDebts.FlatAppearance.BorderSize = 0;
+            this.btnActiveDebts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActiveDebts.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiveDebts.Image = ((System.Drawing.Image)(resources.GetObject("btnActiveDebts.Image")));
+            this.btnActiveDebts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActiveDebts.Location = new System.Drawing.Point(5, 426);
+            this.btnActiveDebts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnActiveDebts.Name = "btnActiveDebts";
+            this.btnActiveDebts.Size = new System.Drawing.Size(190, 73);
+            this.btnActiveDebts.TabIndex = 8;
+            this.btnActiveDebts.Text = "Active Debts";
+            this.btnActiveDebts.UseVisualStyleBackColor = true;
+            this.btnActiveDebts.Click += new System.EventHandler(this.btnActiveDebts_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 347);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(190, 73);
+            this.btnCustomer.TabIndex = 7;
+            this.btnCustomer.Text = "Customers";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // label2
             // 
@@ -100,70 +148,6 @@
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "V1.0-beta";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(221, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(157, 171);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(194, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1245, 28);
-            this.panel3.TabIndex = 2;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1370, 34);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 50);
-            this.button5.TabIndex = 3;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::Phone_And_More.Properties.Resources.IMG_0001;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 129);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 347);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(190, 73);
-            this.btnCustomer.TabIndex = 7;
-            this.btnCustomer.Text = "Customers";
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnhistory
             // 
@@ -229,36 +213,53 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnActiveDebts
+            // panel2
             // 
-            this.btnActiveDebts.FlatAppearance.BorderSize = 0;
-            this.btnActiveDebts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActiveDebts.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActiveDebts.Image = ((System.Drawing.Image)(resources.GetObject("btnActiveDebts.Image")));
-            this.btnActiveDebts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActiveDebts.Location = new System.Drawing.Point(5, 426);
-            this.btnActiveDebts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnActiveDebts.Name = "btnActiveDebts";
-            this.btnActiveDebts.Size = new System.Drawing.Size(190, 73);
-            this.btnActiveDebts.TabIndex = 8;
-            this.btnActiveDebts.Text = "Active Debts";
-            this.btnActiveDebts.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(221, 12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(157, 171);
+            this.panel2.TabIndex = 1;
             // 
-            // btnDebtsHistory
+            // pictureBox1
             // 
-            this.btnDebtsHistory.FlatAppearance.BorderSize = 0;
-            this.btnDebtsHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebtsHistory.Font = new System.Drawing.Font("Andalus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDebtsHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnDebtsHistory.Image")));
-            this.btnDebtsHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDebtsHistory.Location = new System.Drawing.Point(6, 505);
-            this.btnDebtsHistory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnDebtsHistory.Name = "btnDebtsHistory";
-            this.btnDebtsHistory.Size = new System.Drawing.Size(190, 73);
-            this.btnDebtsHistory.TabIndex = 9;
-            this.btnDebtsHistory.Text = "Debts History";
-            this.btnDebtsHistory.UseVisualStyleBackColor = true;
-            this.btnDebtsHistory.Click += new System.EventHandler(this.btnDebtsHistory_Click);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::Phone_And_More.Properties.Resources.IMG_0001;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(194, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1245, 28);
+            this.panel3.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(1370, 34);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(56, 50);
+            this.button5.TabIndex = 3;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // services1
             // 
