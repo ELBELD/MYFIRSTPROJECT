@@ -15,8 +15,8 @@ namespace Phone_And_More
     public partial class AddCustomers : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=PHONEANDMORE;Integrated Security=True");
-        DataTable dt;
-        string id;
+        //DataTable dt;
+        //string id;
         public AddCustomers()
         {
             InitializeComponent();

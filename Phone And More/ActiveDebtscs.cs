@@ -16,6 +16,8 @@ namespace Phone_And_More
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=PHONEANDMORE;Integrated Security=True");
         DataTable dt;
         string ID;
+        DateTime date = DateTime.Now;
+        DateTime time = DateTime.Now;
         public ActiveDebts()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace Phone_And_More
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT debt_ID, customer_ID_FK, customer_name as 'Customer name', item_name as 'Item name',amount as Amount, remaining as Remaining, debt_date as Date, notes FROM debts INNER JOIN customers ON customer_ID_FK = customer_ID ";
+            cmd.CommandText = "SELECT debt_ID, customer_ID_FK, customer_name as 'Customer name', item_name as 'Item name',amount as Amount, remaining as Remaining, debt_date as Date, notes FROM debts INNER JOIN customers ON customer_ID_FK = customer_ID WHERE debt_status = 'YES' ";
             cmd.ExecuteNonQuery();
             dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -87,14 +89,28 @@ namespace Phone_And_More
                 int index = e.RowIndex;
 
                 DataGridViewRow selectedrow = dataGridView1.Rows[index];
-            ID = selectedrow.Cells[2].Value.ToString(); 
-             AddPartialAmmount rc = new AddPartialAmmount();
-            rc.get(ID.ToString());
-            rc.ShowDialog();
-        }
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Full")
+                ID = selectedrow.Cells[2].Value.ToString();
+                AddPartialAmmount rc = new AddPartialAmmount();
+                rc.get(ID.ToString());
+                rc.ShowDialog();
+            }
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Full Payments")
             {
-
+                int index2 = e.RowIndex;
+                DataGridViewRow selectedrow2 = dataGridView1.Rows[index2];
+                string ID2 = selectedrow2.Cells[2].Value.ToString();
+                con.Open();
+                //add Debts Full payment
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO debts_payments(debt_ID_FK, payment_date,payment_time, payment_amount) VALUES ('" + ID2 + "', '" + date + "','" + time + "', (SELECT remaining FROM debts WHERE debt_ID = '" + ID2 + "'))";
+                cmd.ExecuteNonQuery();
+                SqlCommand update = con.CreateCommand();
+                update.CommandType = CommandType.Text;
+                update.CommandText = "UPDATE debts SET remaining = 0,debt_status = 'NO' WHERE debt_ID = '" + ID2 + "'";
+                update.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("done");
 
             }
         }

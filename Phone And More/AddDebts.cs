@@ -102,7 +102,7 @@ namespace Phone_And_More
             int amount = Int32.Parse(txtAmount.Text);
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO debts (customer_ID_FK, item_type, item_name, amount, remaining, debt_date, notes) VALUES ('" + customerid + "', '" + comboBox1.Text + "', '" + txtitemName.Text + "', '" + amount + "', '" + amount + "','" + date + "', '" + txtNotes.Text + "')";
+                cmd.CommandText = "INSERT INTO debts (customer_ID_FK, item_type, item_name, amount, remaining, debt_date, notes,debt_status) VALUES ('" + customerid + "', '" + comboBox1.Text + "', '" + txtitemName.Text + "', '" + amount + "', '" + amount + "','" + date + "', '" + txtNotes.Text + "','YES')";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("done");
