@@ -105,6 +105,7 @@
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(562, 35);
             this.txtprice.TabIndex = 16;
+            this.txtprice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprice_KeyPress);
             // 
             // label4
             // 
@@ -123,6 +124,7 @@
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(562, 35);
             this.txtquantity.TabIndex = 18;
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // btnCancel
             // 

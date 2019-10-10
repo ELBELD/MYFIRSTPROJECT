@@ -37,8 +37,8 @@ namespace Phone_And_More
                 {
                     MainMenu ah = new MainMenu();
                     ah.get(UserTextBox.Text);
-                    ah.Show();
-                    //this.Hide();
+                    ah.ShowDialog();
+                    this.Close();
                 }  
             }
             
@@ -48,8 +48,8 @@ namespace Phone_And_More
                 {
                     MainMenu ah = new MainMenu();
                     ah.get(UserTextBox.Text);
-                    ah.Show();
-                    //this.Hide();
+                    ah.ShowDialog();
+                    this.Close();
                 }
                 else
                 {

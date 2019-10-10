@@ -16,7 +16,7 @@ namespace Phone_And_More
         public MainMenu()
         {
             InitializeComponent();
-            
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -44,7 +44,16 @@ namespace Phone_And_More
             rc.ShowDialog();
 
         }
-
+        void show()
+        {
+            string x = "***admin***";
+            string y = "***Elbeld***";
+            if (lbluserA.Text == x || lbluserA.Text == y)
+            {
+               button3.Visible = true;
+               
+            }
+        }
         private void btnsell_Click(object sender, EventArgs e)
         {
             
@@ -82,6 +91,17 @@ namespace Phone_And_More
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            report rc = new report();
+            rc.ShowDialog();
+        }
+
+        private void lbluserA_TextChanged(object sender, EventArgs e)
+        {
+            show();
         }
     }
 }

@@ -14,3 +14,10 @@ C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And 
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.csproj.GenerateResource.Cache
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.exe
 C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.pdb
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone And More.csprojResolveAssemblyReference.cache
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.ActiveDebts.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.AddCustomers.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.AddDebts.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.AddPartialAmmount.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.Customers.resources
+C:\Users\MacBook\Documents\Visual Studio 2015\Projects\Phone And More\Phone And More\obj\Release\Phone_And_More.DebtsHistory.resources

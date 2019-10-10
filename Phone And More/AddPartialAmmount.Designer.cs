@@ -77,7 +77,7 @@
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 31);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 56;
             this.label1.Text = "Receive Payment";
             // 
             // label2
@@ -134,7 +134,8 @@
             this.txtAmountReceived.Location = new System.Drawing.Point(18, 160);
             this.txtAmountReceived.Name = "txtAmountReceived";
             this.txtAmountReceived.Size = new System.Drawing.Size(557, 35);
-            this.txtAmountReceived.TabIndex = 22;
+            this.txtAmountReceived.TabIndex = 1;
+            this.txtAmountReceived.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountReceived_KeyPress);
             // 
             // btnCancel
             // 
@@ -192,6 +193,7 @@
             this.Name = "AddPartialAmmount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPartialAmmount";
+            this.Load += new System.EventHandler(this.AddPartialAmmount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

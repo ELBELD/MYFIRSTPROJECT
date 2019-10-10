@@ -39,6 +39,7 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddDebts = new System.Windows.Forms.Button();
+            this.lblTotalDebts = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -119,13 +120,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 139);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1307, 664);
+            this.dataGridView1.Size = new System.Drawing.Size(1307, 637);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -142,11 +143,23 @@
             this.btnAddDebts.UseVisualStyleBackColor = true;
             this.btnAddDebts.Click += new System.EventHandler(this.btnAddDebts_Click);
             // 
+            // lblTotalDebts
+            // 
+            this.lblTotalDebts.AutoSize = true;
+            this.lblTotalDebts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDebts.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTotalDebts.Location = new System.Drawing.Point(905, 109);
+            this.lblTotalDebts.Name = "lblTotalDebts";
+            this.lblTotalDebts.Size = new System.Drawing.Size(57, 20);
+            this.lblTotalDebts.TabIndex = 23;
+            this.lblTotalDebts.Text = "label3";
+            // 
             // ActiveDebts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 787);
+            this.Controls.Add(this.lblTotalDebts);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtsearch);
@@ -174,5 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblTotalDebts;
     }
 }

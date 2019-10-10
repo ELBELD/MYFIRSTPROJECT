@@ -45,33 +45,46 @@ namespace Phone_And_More
         }
         void getserviceinvoice()
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ser_inv_ID as 'Invoice #', ser_inv_date,convert(char(5), ser_inv_time, 108) as Time, ser_inv_total_cost, ser_inv_total_price as 'Total Price' FROM services_invoice WHERE ser_inv_date = '" + dateTimePicker1.Text + "' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            this.dataGridView1.Columns["ser_inv_date"].Visible = false;
-            this.dataGridView1.Columns["ser_inv_total_cost"].Visible = false;
+            try {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT ser_inv_ID as 'Invoice #', ser_inv_date,convert(char(5), ser_inv_time, 108) as Time, ser_inv_total_cost, ser_inv_total_price as 'Total Price' FROM services_invoice WHERE ser_inv_date = '" + dateTimePicker1.Text + "' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                this.dataGridView1.Columns["ser_inv_date"].Visible = false;
+                this.dataGridView1.Columns["ser_inv_total_cost"].Visible = false;
 
-            con.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         void getSelectedserviceDetails()
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ser_inv_id, services.service_name as Name, ser_inv_quantity as Quantity ,ser_inv_price as 'Total Price' FROM ser_inv_details INNER JOIN services ON ser_inv_SID = SID WHERE ser_inv_id = '" + lblsid2.Text + "' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView2.DataSource = dt;
-            con.Close();
-            this.dataGridView2.Columns["ser_inv_id"].Visible = false;
+            try {
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT ser_inv_id, services.service_name as Name, ser_inv_quantity as Quantity ,ser_inv_price as 'Total Price' FROM ser_inv_details INNER JOIN services ON ser_inv_SID = SID WHERE ser_inv_id = '" + lblsid2.Text + "' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView2.DataSource = dt;
+                con.Close();
+                this.dataGridView2.Columns["ser_inv_id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         void TotalPrice()

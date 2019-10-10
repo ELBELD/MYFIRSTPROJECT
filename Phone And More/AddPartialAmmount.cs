@@ -20,7 +20,7 @@ namespace Phone_And_More
         public AddPartialAmmount()
         {
             InitializeComponent();
-           
+            this.AcceptButton = button1;
 
         }
         public void get(string x)
@@ -45,6 +45,7 @@ namespace Phone_And_More
                     txtRemaingAmount.Text = myreader[1].ToString();
 
                 }
+               
 
                 con.Close();
             
@@ -85,10 +86,31 @@ namespace Phone_And_More
 
                 con.Close();
                 MessageBox.Show("done");
+                this.Close();
             }
             catch
             {
 
+            }
+        }
+
+        private void AddPartialAmmount_Load(object sender, EventArgs e)
+        {
+            this.txtAmountReceived.Focus();
+        }
+
+        private void txtAmountReceived_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

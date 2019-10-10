@@ -19,7 +19,7 @@ namespace Phone_And_More
         DateTime date = DateTime.Now;
         DateTime time = DateTime.Now;
         string stringid;
-        string name, qunatity = "1", price, barcode, cost, itemid;
+        string name, qunatity /*= "1"*/, price, barcode, cost, itemid;
        
         
         private void txtselect_TextChanged(object sender, EventArgs e)
@@ -31,6 +31,7 @@ namespace Phone_And_More
         {
             InitializeComponent();
             autocompletxt();
+            qunatity = numericUpDown1.Value.ToString();
             table.Columns.Add("Barcode", typeof(string));
             table.Columns.Add("Item Name", typeof(string));
             table.Columns.Add("Unit Price", typeof(string));
@@ -43,6 +44,7 @@ namespace Phone_And_More
             this.dataGridView1.Columns["Cost"].Visible = false;
             this.dataGridView1.Columns["Item_ID"].Visible = false;
             this.dataGridView1.Columns["Total Cost"].Visible = false;
+            addbuttontogrid();
         }
         void autocompletxt()
         {
@@ -67,21 +69,21 @@ namespace Phone_And_More
        
         private void txtselect_KeyDown(object sender, KeyEventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                if (e.KeyCode == Keys.Enter)
-                {
+            //    if (e.KeyCode == Keys.Enter)
+            //    {
 
-                    check();
-                }
+            //        check();
+            //    }
 
 
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
 
-            }
+            //}
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -91,21 +93,21 @@ namespace Phone_And_More
        
         private void txtbarcode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                if (e.KeyCode == Keys.Enter)
-                {
+            //    if (e.KeyCode == Keys.Enter)
+            //    {
 
-                    check();
-                }
+            //        check();
+            //    }
 
 
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
 
-            }
+            //}
         }
         void barcodid()
         {
@@ -136,29 +138,17 @@ namespace Phone_And_More
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //int index = e.RowIndex;
-            //DataGridViewRow selectedrow = dataGridView1.Rows[index];
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                if (MessageBox.Show("Are you sure want to delete this record ?", "warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    dataGridView1.Rows.RemoveAt(rowindex);
+                    sumtotal();
+                }
 
-            //{
-            //    using (EditSellinvoice frm = new EditSellinvoice() { })
-            //    {
-            //        if(frm.ShowDialog() == DialogResult.OK)
-            //        {
-            //            dataGridView1.Rows[index].Cells[2].Value = frm.getprice();
-            //            //dataGridView1.Rows[index].Cells[3].Value = frm.getquantity();
-            //        }
-            //    }
-                
-                
-            //}
 
-            //    }
-            //catch
-            //{
-
-            //}
+            }
         }
 
         private void txtprice_TextChanged(object sender, EventArgs e)
@@ -174,6 +164,32 @@ namespace Phone_And_More
         private void SellForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            qunatity = numericUpDown1.Value.ToString();
+        }
+
+        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+                if (e.KeyCode == Keys.Enter)
+                {
+
+                    check();
+                    txtselect.Focus();
+                }
+
+
+            }
+            catch
+            {
+
+            }
+            
         }
 
         void loadid()
@@ -266,15 +282,27 @@ namespace Phone_And_More
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
 
-                sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value);
-                cost2 += Convert.ToInt32(dataGridView1.Rows[i].Cells[7].Value);
+                sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[5].Value);
+                cost2 += Convert.ToInt32(dataGridView1.Rows[i].Cells[8].Value);
 
             }
             lblTotalprice.Text = sum.ToString();
             lblcost.Text = cost2.ToString();
         }
-        
-        void addsellone()
+        void addbuttontogrid()
+        {
+            //add first button
+            DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
+            Delete.Name = "Delete";
+            Delete.Text = "Delete";
+            int columnIndex = 6;
+            Delete.UseColumnTextForButtonValue = true;
+            if (dataGridView1.Columns["Delete"] == null)
+            {
+                dataGridView1.Columns.Insert(columnIndex, Delete);
+            }
+        }
+            void addsellone()
         {
             try
             {
@@ -287,7 +315,7 @@ namespace Phone_And_More
             table.Rows.Add(barcode, name, price, qunatity, x * y, cost, itemid, c * y);
             dataGridView1.DataSource = table;
             name = "";
-            qunatity = "1";
+            //qunatity = "1";
             price = "";
             txtselect.Focus();
             label5.Visible = true;
@@ -297,7 +325,7 @@ namespace Phone_And_More
             txtselect.Text = "";
             lblid.Text = "";
             name = "";
-            qunatity = "1";
+            //qunatity = "1";
             price = "";
             barcode = "";
             cost = "";
@@ -338,7 +366,7 @@ namespace Phone_And_More
                 insert.CommandType = CommandType.Text;
                 // create your parameters
 
-                insert.CommandText = "INSERT INTO invoice_details (inv_id,inv_det_IID,inv_det_quantity,inv_det_cost,inv_det_price) VALUES ('" + id + "','" + Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value) + "','" + dataGridView1.Rows[i].Cells[3].Value + "', '" + dataGridView1.Rows[i].Cells[5].Value + "', '" + dataGridView1.Rows[i].Cells[2].Value + "')";
+                insert.CommandText = "INSERT INTO invoice_details (inv_id,inv_det_IID,inv_det_quantity,inv_det_cost,inv_det_price) VALUES ('" + id + "','" + Convert.ToInt32(dataGridView1.Rows[i].Cells[7].Value) + "','" + dataGridView1.Rows[i].Cells[4].Value + "', '" + dataGridView1.Rows[i].Cells[6].Value + "', '" + dataGridView1.Rows[i].Cells[3].Value + "')";
                 insert.ExecuteNonQuery();
 
             }
@@ -348,7 +376,7 @@ namespace Phone_And_More
 
                 SqlCommand update = con.CreateCommand();
                 update.CommandType = CommandType.Text;
-                update.CommandText = "UPDATE stock SET item_qty = (item_qty - '" + Convert.ToInt32(dataGridView1.Rows[k].Cells[3].Value) + "') WHERE stockid = '" + Convert.ToInt32(dataGridView1.Rows[k].Cells[6].Value) + "' ";
+                update.CommandText = "UPDATE stock SET item_qty = (item_qty - '" + Convert.ToInt32(dataGridView1.Rows[k].Cells[4].Value) + "') WHERE stockid = '" + Convert.ToInt32(dataGridView1.Rows[k].Cells[7].Value) + "' ";
                 update.ExecuteNonQuery();
             }
 

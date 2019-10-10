@@ -72,7 +72,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1134, 121);
+            this.panel1.Size = new System.Drawing.Size(1136, 121);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -304,6 +304,7 @@
             this.lbltest.Size = new System.Drawing.Size(24, 13);
             this.lbltest.TabIndex = 5;
             this.lbltest.Text = "test";
+            this.lbltest.Visible = false;
             // 
             // Services
             // 
@@ -319,7 +320,7 @@
             this.Controls.Add(this.dataGridInvoice);
             this.Controls.Add(this.panel1);
             this.Name = "Services";
-            this.Size = new System.Drawing.Size(1134, 785);
+            this.Size = new System.Drawing.Size(1136, 785);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInvoice)).EndInit();

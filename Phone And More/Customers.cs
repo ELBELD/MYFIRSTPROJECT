@@ -66,5 +66,29 @@ namespace Phone_And_More
 
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = e.RowIndex;
+                DataGridViewRow selectedrow = dataGridView1.Rows[index];
+                id = selectedrow.Cells[0].Value.ToString();
+                UpdateCustomer rc = new UpdateCustomer();
+                rc.get(id.ToString());
+                rc.FormClosing += new FormClosingEventHandler(this.Form2_FormClosing);
+                rc.ShowDialog();
+
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

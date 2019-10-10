@@ -49,21 +49,7 @@ namespace Phone_And_More
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                int index = e.RowIndex;
-                DataGridViewRow selectedrow = dataGridView1.Rows[index];
-                id = selectedrow.Cells[0].Value.ToString();
-                UpdateStock rc = new UpdateStock();
-                rc.get(id.ToString());
-                rc.FormClosing += new FormClosingEventHandler(this.Form2_FormClosing);
-                rc.ShowDialog();
-
-            }
-            catch
-            {
-
-            }
+           
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -80,6 +66,25 @@ namespace Phone_And_More
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = e.RowIndex;
+                DataGridViewRow selectedrow = dataGridView1.Rows[index];
+                id = selectedrow.Cells[0].Value.ToString();
+                UpdateStock rc = new UpdateStock();
+                rc.get(id.ToString());
+                rc.FormClosing += new FormClosingEventHandler(this.Form2_FormClosing);
+                rc.ShowDialog();
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

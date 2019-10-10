@@ -21,6 +21,7 @@ namespace Phone_And_More
         {
             InitializeComponent();
             autocompleteCustomerName();
+            this.AcceptButton = button1;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -102,14 +103,15 @@ namespace Phone_And_More
             int amount = Int32.Parse(txtAmount.Text);
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO debts (customer_ID_FK, item_type, item_name, amount, remaining, debt_date, notes,debt_status) VALUES ('" + customerid + "', '" + comboBox1.Text + "', '" + txtitemName.Text + "', '" + amount + "', '" + amount + "','" + date + "', '" + txtNotes.Text + "','YES')";
+                cmd.CommandText = "INSERT INTO debts (customer_ID_FK, item_type, item_name, amount, remaining, debt_date, notes,debt_status) VALUES ('" + customerid + "', '" + comboBox1.Text + "', '" + txtitemName.Text + "', '" + amount + "', '" + amount + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', '" + txtNotes.Text + "','NO')";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("done");
+                this.Close();
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -134,37 +136,49 @@ namespace Phone_And_More
         }
         void loadcustomerid()
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select customer_ID from customers where customer_name='" + txtCustomername.Text + "'";
-            cmd.ExecuteNonQuery();
-            SqlDataReader myreader;
-            myreader = cmd.ExecuteReader();
-            while (myreader.Read())
-            {
-                customerid = (myreader[0].ToString());
-                
+            try {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select customer_ID from customers where customer_name='" + txtCustomername.Text + "'";
+                cmd.ExecuteNonQuery();
+                SqlDataReader myreader;
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    customerid = (myreader[0].ToString());
 
+
+                }
+                con.Close();
             }
-            con.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         void loadStockid()
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select stockid,item_price from stock where item_name='" + txtitemName.Text + "'";
-            cmd.ExecuteNonQuery();
-            SqlDataReader myreader;
-            myreader = cmd.ExecuteReader();
-            while (myreader.Read())
-            {
-               stockid = (myreader[0].ToString());
-                txtAmount.Text = (myreader[1].ToString());
-                
+            try {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select stockid,item_price from stock where item_name='" + txtitemName.Text + "'";
+                cmd.ExecuteNonQuery();
+                SqlDataReader myreader;
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    stockid = (myreader[0].ToString());
+                    txtAmount.Text = (myreader[1].ToString());
+
+                }
+                con.Close();
             }
-            con.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         void loadserviceid()
         {
@@ -197,6 +211,21 @@ namespace Phone_And_More
             }
            
             
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
